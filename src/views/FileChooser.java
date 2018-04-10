@@ -15,14 +15,8 @@ public class FileChooser extends JDialog{
 		setSize(800,400);
 		setLocationRelativeTo(null);
 		setModal(true);
-		FileNameExtensionFilter filterX = new FileNameExtensionFilter(".xml", "xml");
-		FileNameExtensionFilter filterJ = new FileNameExtensionFilter(".jsn", "jsn");
-		FileNameExtensionFilter filterB = new FileNameExtensionFilter(".bin", "bin");
 		FileNameExtensionFilter filterT = new FileNameExtensionFilter(".txt", "txt");
 		jFileChooser = new JFileChooser();
-		jFileChooser.setFileFilter(filterX);
-		jFileChooser.setFileFilter(filterJ);
-		jFileChooser.setFileFilter(filterB);
 		jFileChooser.setFileFilter(filterT);
 	}
 
@@ -42,4 +36,5 @@ public class FileChooser extends JDialog{
 		}else
 			throw new Exception("No se ha seleccionado ningun archivo");
 	}
+	
 }
