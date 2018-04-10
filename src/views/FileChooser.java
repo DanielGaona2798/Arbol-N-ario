@@ -2,7 +2,6 @@ package views;
 
 import javax.swing.JDialog;
 import javax.swing.JFileChooser;
-import javax.swing.filechooser.FileNameExtensionFilter;
 
 import controllers.Controller;
 
@@ -15,9 +14,8 @@ public class FileChooser extends JDialog{
 		setSize(800,400);
 		setLocationRelativeTo(null);
 		setModal(true);
-		FileNameExtensionFilter filterT = new FileNameExtensionFilter(".txt", "txt");
 		jFileChooser = new JFileChooser();
-		jFileChooser.setFileFilter(filterT);
+		jFileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
 	}
 
 

@@ -6,9 +6,11 @@ public class Controller {
 
 	
 	private FileChooser fileChooser;
+	private String directory;
 	
 	public Controller() throws Exception {
 		fileChooser = new FileChooser(this);
-		fileChooser.getPathFile();
+		directory = fileChooser.getPathFile();
 	}
+	
 }
