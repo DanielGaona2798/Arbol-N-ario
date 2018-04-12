@@ -8,7 +8,9 @@ public class Node<T> {
 	private ArrayList<Node<T>> nodeList;
 	private Node<T> father;
 	
-	public Node() {
+	public Node(T info, Node<T> father) {
+		this.info = info;
+		this.father = father;
 	}
 
 	public T getInfo() {
@@ -23,8 +25,8 @@ public class Node<T> {
 		return nodeList;
 	}
 
-	public void setNodeList(ArrayList<Node<T>> nodeList) {
-		this.nodeList = nodeList;
+	public void addListNode(Node<T> newNode){
+		nodeList.add(newNode);
 	}
 
 	public Node<T> getFather() {
