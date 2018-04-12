@@ -3,7 +3,7 @@ package views;
 import javax.swing.JDialog;
 import javax.swing.JFileChooser;
 
-import controllers.Controller;
+import controller.Controller;
 
 public class FileChooser extends JDialog{
 
@@ -19,12 +19,13 @@ public class FileChooser extends JDialog{
 	}
 
 
-	public String getPathFile() throws Exception{
+	public String getPathFile(){
 		int selection = jFileChooser.showOpenDialog(this);
 		if(selection == JFileChooser.APPROVE_OPTION){
 			return jFileChooser.getSelectedFile().getPath();
-		}else
-			throw new Exception("Cancelo La Seleccion");		
+		}else {
+			return null;
+		}
 	}
 	
 	public String showSaveFile() throws Exception{
@@ -34,5 +35,4 @@ public class FileChooser extends JDialog{
 		}else
 			throw new Exception("No se ha seleccionado ningun archivo");
 	}
-	
 }

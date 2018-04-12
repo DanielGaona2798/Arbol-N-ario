@@ -2,3 +2,7 @@
 /models/
 /run/
 /views/
+/src/
+/controller/
+/model/
+/runner/
